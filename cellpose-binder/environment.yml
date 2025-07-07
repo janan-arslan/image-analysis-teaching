@@ -1,0 +1,25 @@
+name: cellpose-env
+channels:
+  - conda-forge
+  - pytorch
+dependencies:
+  - python=3.9
+  - pip
+  - numpy
+  - matplotlib
+  - scipy
+  - scikit-image
+  - opencv
+  - pytorch
+  - torchvision
+  - jupyterlab
+  - ipywidgets
+  - tqdm
+  - natsort
+  - pip:
+    - cellpose[gui]
+    - roifile
+    - nd2
+    - tifffile
+    - imageio
+    - ipyfilechooser

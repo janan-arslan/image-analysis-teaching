@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Enable JupyterLab extensions
+jupyter labextension install @jupyter-widgets/jupyterlab-manager
+
+# Download sample models (optional, for faster startup)
+python -c "from cellpose import models; models.Cellpose(model_type='cyto'); models.Cellpose(model_type='nuclei'); print('Models downloaded successfully!')"
+
+# Make sample data directory accessible
+chmod -R 755 sample_data/
+
+# Ensure the postBuild script is executable
+chmod +x postBuild
